@@ -15,14 +15,16 @@ class ShopListRouteConfig {
         selectedItem = null,
         show404 = false;
 
-  ShopListRouteConfig.nestedItemRoute(
-    this.id,
-    this.selectedItem,
-    this.selectedRoute,
-  ) : show404 = false;
+  ShopListRouteConfig.nestedItemRoute({
+    required this.id,
+    required this.selectedItem,
+    required this.selectedRoute,
+  }) : show404 = false;
 
-  ShopListRouteConfig.details(this.selectedItem, this.id)
-      : selectedRoute = null,
+  ShopListRouteConfig.details({
+    required this.selectedItem,
+    required this.id,
+  })  : selectedRoute = null,
         show404 = false;
 
   ShopListRouteConfig.error()
@@ -35,7 +37,7 @@ class ShopListRouteConfig {
 
   bool get isDetailPage => selectedRoute == null && selectedItem != null;
 
-  bool get isNewRoute => selectedRoute != null && selectedItem == null;
+  bool get isNewPage => selectedRoute != null && selectedItem == null;
 
   bool get isNestedPage => selectedRoute != null && selectedItem != null;
 }

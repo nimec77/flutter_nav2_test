@@ -1,5 +1,6 @@
 class RouteNames {
-  static const itemListRoute = '/item-list';
-  static const itemDetailRoute = '/item-detail';
-  static const cartRoute = '/cart';
+  static const itemListRoute = 'home';
+  static const cartRoute = 'cart';
+
+  static const routes = [itemListRoute, cartRoute];
 }
